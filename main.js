@@ -5,12 +5,12 @@ request = require('request');
 // Parameters
 var selectedSymbol = "BTCUSD";
 var requestInterval = 2000; // 20 mn
-var relayToggleInterval = 1000; // length of bubble animation when bitcoin value has changed
+var relayToggleInterval = 500; // length of bubble animation when bitcoin value has changed
 var servoMaxAngle = 180;
 var servoMinAngle = 45;
 var servoPin = 9;
 var relayPin = 10;
-var debug = false;
+var debug = true;
 
 // Variables
 var servo;
@@ -58,6 +58,10 @@ function updateSymbolStats() {
         var value = Math.floor(Math.random() * 135) + 45;
         console.log(value);
         servo.to(value);
+        relay.on();
+        setTimeout(function() {
+            relay.off()
+        }, relayToggleInterval);
     }
 }
 
