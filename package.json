@@ -1,0 +1,23 @@
+{
+  "name": "workshop-stereolux-nantes-2014-02",
+  "version": "0.0.0",
+  "description": "workshop-stereolux-nantes-2014-02 =================================",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ianisl/workshop-stereolux-nantes-2014-02.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ianisl/workshop-stereolux-nantes-2014-02/issues"
+  },
+  "homepage": "https://github.com/ianisl/workshop-stereolux-nantes-2014-02",
+  "dependencies": {
+    "johnny-five": "~0.7.18",
+    "request": "~2.34.0"
+  }
+}
