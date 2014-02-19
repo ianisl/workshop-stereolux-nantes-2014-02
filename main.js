@@ -10,7 +10,7 @@ var servoMaxAngle = 180;
 var servoMinAngle = 45;
 var servoPin = 9;
 var relayPin = 10;
-var debug = true;
+var debug = false;
 
 // Variables
 var servo;
@@ -43,7 +43,7 @@ function updateSymbolStats() {
                 console.log("---- last_all: " + symbolStats.last_all.value);
                 var high = symbolStats.high.value;
                 var low = symbolStats.low.value;
-                // var value = symbolStats.last_all.value;
+                var value = symbolStats.last_all.value;
                 servo.to(computePos(value, high, low));
                 if (previousValue !== value) {
                     relay.on();
